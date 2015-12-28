@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+<link href='manager_style.css' rel='stylesheet' type='text/css'>
+    <script src="jquery-1.11.3.min.js"></script>
+    <script src="manager_js.js"></script>
+</head>
+  <body>
+    <header>
+       <h1>Reservation System</h1>
+       <p id="warn">(This web cannot support IE completely.)</p>
+    </header>
+      <form method="post" id="connect" enctype='application/json' onsubmit="tranSub();">
+      </form>
+      <h3>Title:</h3>
+      <input type="text" name="title" form="connect" required><br/>
+      <h3>Content:</h3>
+      <textarea name="content" rows="20" cols="40" form="connect" required></textarea><br/>
+      <h3>Name:</h3>
+      <input type="text" name="name" form="connect" required><br/>
+      <h3>Phone:</h3>
+      <input type="text" name="phone" form="connect" required><br/>
+      <h3>Email:</h3>
+      <input type="email" name="email" form=connect required><br/>
+      <h3>Date:</h3>
+      <div id="dynamicInput">
+        <div id=removedate_0></br>
+        <input type='datetime-local' name='d[0]' form='connect'>
+        <input type='hidden' id='timestamp' name='t[0]' form='connect'>
+        <input type=button id=more_fields"+(counter)+" onclick=removeDate(0); value='Remove' ></div>
+      </div>
+      <input type="button" value="addDate" onClick="addInput('dynamicInput');" form="connect">
+      <input type="submit" value="Submit" name="sub" form="connect"/>
+	</body>
+</html>
